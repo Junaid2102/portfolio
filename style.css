@@ -468,6 +468,54 @@ section .title::after {
 }
 
 
+/* Work */
+.work {
+    padding: 50px 0;
+    background: #fff;
+}
+.work .title::after {
+    content: "My Work";
+}
+
+.work .title {
+    position: relative;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.work .work-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.work .work-item {
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: calc(33.333% - 20px); /* Adjust the width to fit three items per row with gaps */
+    box-sizing: border-box;
+}
+
+.work .work-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    max-width: 200px; /* Limit the maximum width of the images */
+    max-height: 150px; /* Limit the maximum height of the images */
+}
+
+.work .work-item p {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #333;
+}
+
 /* contact section styling */
 
 .contact .title::after {
