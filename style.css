@@ -339,7 +339,7 @@ section .title::after {
 .services .title::after,
 .teams .title::after {
     background: #111;
-    content: "what i provide";
+    content: "what I provide";
 }
 
 .experience,
@@ -356,7 +356,7 @@ section .title::after {
 .experience .title::after,
 .teams .title::after {
     background: #111;
-    content: "what i provide";
+    content: "My Experience";
 }
 
 #education .title::after,
