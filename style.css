@@ -46,6 +46,7 @@ section {
 
 .about,
 .services,
+.experience,
 .skills,
 .teams,
 .contact,
@@ -55,6 +56,7 @@ footer {
 
 .about .about-content,
 .services .serv-content,
+.experience .expr-content,
 .skills .skills-content,
 .contact .contact-content {
     display: flex;
@@ -340,6 +342,23 @@ section .title::after {
     content: "what i provide";
 }
 
+.experience,
+.teams {
+    color: #fff;
+    background: #111;
+}
+
+.experience .title::before,
+.teams .title::before {
+    background: #fff;
+}
+
+.experience .title::after,
+.teams .title::after {
+    background: #111;
+    content: "what i provide";
+}
+
 #education .title::after,
 .teams .title::after {
     background: #111;
@@ -379,6 +398,44 @@ section .title::after {
 }
 
 .services .serv-content .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+.experience .expr-content .card {
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 50px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.experience .expr-content .card:hover {
+    background: crimson;
+}
+
+.experience .expr-content .card .box {
+    transition: all 0.3s ease;
+}
+
+.experience .expr-content .card:hover .box {
+    transform: scale(1.05);
+}
+
+.experience .expr-content .card i {
+    font-size: 50px;
+    color: crimson;
+    transition: color 0.3s ease;
+}
+
+.experience .expr-content .card:hover i {
+    color: #fff;
+}
+
+.experience .expr-content .card .text {
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
@@ -725,6 +782,10 @@ footer span a:hover {
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
+    .experience .expr-content .card {
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
     .skills .skills-content .column,
     .contact .contact-content .column {
         width: 100%;
@@ -746,6 +807,9 @@ footer span a:hover {
         font-size: 20px;
     }
     .services .serv-content .card {
+        width: 100%;
+    }
+    .experience .expr-content .card {
         width: 100%;
     }
 }
