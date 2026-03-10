@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Muhammad Junaid Alam — Odoo Developer & ERP Architect</title>
+<title>Muhammad Junaid Alam - Odoo Developer & ERP Architect</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230c0c10'/%3E%3Crect x='6' y='58' width='52' height='2' rx='1' fill='%23c9a84c' opacity='.5'/%3E%3Ctext x='32' y='44' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='40' font-weight='700' fill='%23c9a84c'%3EJ%3C/text%3E%3C/svg%3E"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,500&family=Syne:wght@400;500;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
@@ -22,7 +22,7 @@
 html{scroll-behavior:smooth;cursor:none}
 body{background:var(--ink);color:var(--paper);font-family:'Syne',sans-serif;overflow-x:hidden;line-height:1.6}
 
-/* ══ LOADER ══ */
+/* == LOADER == */
 #loader{position:fixed;inset:0;background:var(--ink);z-index:9500;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:2rem}
 #loader.out{animation:loaderOut .8s .2s ease forwards}
 @keyframes loaderOut{to{opacity:0;visibility:hidden;pointer-events:none}}
@@ -33,17 +33,17 @@ body{background:var(--ink);color:var(--paper);font-family:'Syne',sans-serif;over
 .ld-pct{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--p40);letter-spacing:.2em}
 .ld-line{font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--p20);letter-spacing:.15em;min-height:1em}
 
-/* ══ NOISE OVERLAY ══ */
+/* == NOISE OVERLAY == */
 #noise{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px;animation:noiseShift 8s steps(10) infinite}
 @keyframes noiseShift{0%{background-position:0 0}100%{background-position:200px 200px}}
 
-/* ══ AURORA CANVAS ══ */
+/* == AURORA CANVAS == */
 #aurora{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.7}
 
-/* ══ SCROLL PROGRESS ══ */
+/* == SCROLL PROGRESS == */
 #spbar{position:fixed;top:0;left:0;height:2px;z-index:8000;background:linear-gradient(90deg,var(--gold),var(--gold2),var(--teal));width:0%;box-shadow:0 0 8px var(--gold);transition:width .08s}
 
-/* ══ CURSOR ══ */
+/* == CURSOR == */
 #cur{position:fixed;pointer-events:none;z-index:9000;top:0;left:0}
 .cur-dot{position:absolute;width:8px;height:8px;background:var(--gold);border-radius:50%;transform:translate(-50%,-50%);transition:width .2s,height .2s,background .2s;box-shadow:0 0 6px var(--gold)}
 .cur-ring{position:absolute;width:32px;height:32px;border:1px solid rgba(201,168,76,.4);border-radius:50%;transform:translate(-50%,-50%);transition:width .25s,height .25s,border-color .25s}
@@ -53,7 +53,7 @@ body.hov .cur-ring{width:52px;height:52px;border-color:rgba(201,168,76,.8)}
 body.click .cur-dot{width:6px;height:6px}
 body.click .cur-ring{width:44px;height:44px}
 
-/* ══ NAV ══ */
+/* == NAV == */
 nav{position:fixed;top:0;left:0;right:0;z-index:7000;display:flex;justify-content:space-between;align-items:center;padding:2rem 5rem;transition:all .5s}
 nav.sticky{background:rgba(8,8,16,.92);backdrop-filter:blur(24px);padding:1.2rem 5rem;border-bottom:1px solid var(--border)}
 .nl{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;font-style:italic;color:var(--paper);text-decoration:none;letter-spacing:-.01em;position:relative;overflow:hidden}
@@ -66,7 +66,7 @@ nav.sticky{background:rgba(8,8,16,.92);backdrop-filter:blur(24px);padding:1.2rem
 .nlinks a:hover{color:transparent}
 .nlinks a:hover::before{clip-path:inset(0 0% 0 0)}
 
-/* ══ HERO ══ */
+/* == HERO == */
 #hero{position:relative;min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:0 5rem;z-index:2;overflow:hidden}
 .hero-l{padding-right:3rem}
 .hero-tag{display:inline-flex;align-items:center;gap:.8rem;font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:2.5rem;opacity:0;animation:tagIn .8s .4s cubic-bezier(.16,1,.3,1) forwards}
@@ -97,7 +97,7 @@ nav.sticky{background:rgba(8,8,16,.92);backdrop-filter:blur(24px);padding:1.2rem
 .cta-s:hover .fill{transform:scaleX(1)}
 .cta-s:hover{border-color:var(--gold);color:var(--gold)}
 
-/* HERO RIGHT — STATS */
+/* HERO RIGHT - STATS */
 .hero-r{display:flex;flex-direction:column;gap:1px;background:var(--border);opacity:0;animation:fadeSlide .8s 2s ease forwards}
 .scard{background:var(--ink2);padding:2.2rem 2.4rem;display:grid;grid-template-columns:auto 1fr;align-items:center;gap:2rem;position:relative;overflow:hidden;cursor:none;transition:background .3s}
 .scard::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--gold);transition:width .3s}
@@ -122,12 +122,12 @@ nav.sticky{background:rgba(8,8,16,.92);backdrop-filter:blur(24px);padding:1.2rem
 @keyframes wheelScroll{0%,100%{transform:translateY(0);opacity:1}60%{transform:translateY(8px);opacity:.3}}
 .scroll-lbl{font-family:'JetBrains Mono',monospace;font-size:.5rem;letter-spacing:.2em;text-transform:uppercase;color:var(--p20)}
 
-/* ══ GLOW DIVIDER ══ */
+/* == GLOW DIVIDER == */
 .gd{position:relative;z-index:2;height:1px;background:var(--border);margin:0}
 .gd::after{content:'';position:absolute;left:50%;top:-1px;transform:translateX(-50%);width:80px;height:3px;background:linear-gradient(to right,transparent,var(--gold),transparent);border-radius:2px;filter:blur(3px);animation:gdPulse 3s ease-in-out infinite alternate}
 @keyframes gdPulse{from{width:60px;opacity:.3}to{width:400px;opacity:.9}}
 
-/* ══ TICKER ══ */
+/* == TICKER == */
 #ticker{background:var(--ink2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:1.3rem 0;overflow:hidden;position:relative;z-index:2;cursor:none}
 #ticker:hover .tinner{animation-play-state:paused}
 .tinner{display:flex;gap:2rem;animation:tickMove 40s linear infinite;white-space:nowrap}
@@ -137,7 +137,7 @@ nav.sticky{background:rgba(8,8,16,.92);backdrop-filter:blur(24px);padding:1.2rem
 .ti:hover .tdot{box-shadow:0 0 10px var(--gold),0 0 20px rgba(201,168,76,.3)}
 @keyframes tickMove{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-/* ══ SECTION BASE ══ */
+/* == SECTION BASE == */
 .sw{position:relative;z-index:2;padding:9rem 5rem}
 .stag{display:flex;align-items:center;gap:1.2rem;margin-bottom:1.5rem}
 .snum{font-family:'JetBrains Mono',monospace;font-size:.6rem;color:var(--gold);letter-spacing:.12em}
@@ -147,7 +147,7 @@ nav.sticky{background:rgba(8,8,16,.92);backdrop-filter:blur(24px);padding:1.2rem
 .sh2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,4vw,5rem);font-weight:300;line-height:1;letter-spacing:-.025em;color:var(--paper)}
 .sh2 em{font-style:italic;color:var(--gold)}
 
-/* ══ EXPERTISE ══ */
+/* == EXPERTISE == */
 #expertise{background:var(--ink)}
 .exlay{display:grid;grid-template-columns:280px 1fr;gap:7rem;align-items:start;margin-top:5rem}
 .ex-intro p{font-size:.95rem;color:var(--p40);line-height:1.9;margin-top:1.5rem}
@@ -165,7 +165,7 @@ nav.sticky{background:rgba(8,8,16,.92);backdrop-filter:blur(24px);padding:1.2rem
 .ec:hover .ec-t{color:var(--gold2)}
 .ec-d{font-size:.8rem;color:var(--p40);line-height:1.75}
 
-/* ══ EXPERIENCE ══ */
+/* == EXPERIENCE == */
 #experience{background:var(--ink2)}
 .timeline{margin-top:5rem}
 .te{display:grid;grid-template-columns:240px 1fr;border-top:1px solid var(--border);padding:4rem 0;gap:4rem;position:relative;transition:padding .4s}
@@ -184,7 +184,7 @@ nav.sticky{background:rgba(8,8,16,.92);backdrop-filter:blur(24px);padding:1.2rem
 .te:hover .tpts li{color:var(--p60);padding-left:1.9rem}
 .te:hover .tpts li::before{width:12px}
 
-/* ══ PROJECTS ══ */
+/* == PROJECTS == */
 #projects{background:var(--ink)}
 .phead{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:4rem;flex-wrap:wrap;gap:2rem}
 .phead p{font-size:.9rem;color:var(--p40);max-width:340px;text-align:right;line-height:1.8}
@@ -219,7 +219,7 @@ nav.sticky{background:rgba(8,8,16,.92);backdrop-filter:blur(24px);padding:1.2rem
 .pctag{font-family:'JetBrains Mono',monospace;font-size:.53rem;letter-spacing:.07em;color:var(--p20);border:1px solid var(--border);padding:.16rem .5rem;transition:all .3s}
 .pc:hover .pctag{color:rgba(201,168,76,.55);border-color:rgba(201,168,76,.18)}
 
-/* ══ CONTACT ══ */
+/* == CONTACT == */
 #contact{background:var(--ink2);min-height:85vh;display:flex;align-items:center;padding:9rem 5rem;position:relative;z-index:2;overflow:hidden}
 .c-orb{position:absolute;border-radius:50%;pointer-events:none;filter:blur(100px)}
 .c-orb1{width:500px;height:500px;background:radial-gradient(circle,rgba(201,168,76,.08),transparent 70%);top:50%;left:30%;transform:translate(-50%,-50%);animation:orbFloat1 6s ease-in-out infinite}
@@ -244,14 +244,14 @@ nav.sticky{background:rgba(8,8,16,.92);backdrop-filter:blur(24px);padding:1.2rem
 .cclbl{font-size:.9rem;font-weight:700;color:var(--paper);margin-bottom:.3rem;transition:color .3s}
 .ccval{font-family:'JetBrains Mono',monospace;font-size:.66rem;color:var(--p40);letter-spacing:.03em}
 
-/* ══ FOOTER ══ */
+/* == FOOTER == */
 footer{border-top:1px solid var(--border);padding:2.5rem 5rem;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2;flex-wrap:wrap;gap:1rem;overflow:hidden}
 footer::before{content:'';position:absolute;top:0;left:0;height:1px;width:0;background:linear-gradient(to right,var(--gold),var(--teal),transparent);animation:footLine 2s 1s ease forwards}
 @keyframes footLine{to{width:50%}}
 .fsig{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--p20)}
 .fright{font-family:'JetBrains Mono',monospace;font-size:.57rem;color:var(--p20);letter-spacing:.08em}
 
-/* ══ REVEAL SYSTEM ══ */
+/* == REVEAL SYSTEM == */
 /* split-line reveal handled via JS classList */
 .rv{opacity:0;transform:translateY(55px);transition:opacity .9s ease,transform .9s cubic-bezier(.16,1,.3,1)}
 .rv.in{opacity:1;transform:translateY(0)}
@@ -262,12 +262,12 @@ footer::before{content:'';position:absolute;top:0;left:0;height:1px;width:0;back
 .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
 .d4{transition-delay:.32s}.d5{transition-delay:.4s}.d6{transition-delay:.48s}
 
-/* ══ SCROLLBAR ══ */
+/* == SCROLLBAR == */
 ::-webkit-scrollbar{width:3px}
 ::-webkit-scrollbar-track{background:var(--ink)}
 ::-webkit-scrollbar-thumb{background:linear-gradient(to bottom,var(--gold),var(--teal));border-radius:2px}
 
-/* ══ RESPONSIVE ══ */
+/* == RESPONSIVE == */
 @media(max-width:1100px){
   #hero{grid-template-columns:1fr;padding:8rem 3rem 5rem}.hero-l{padding-right:0}.hero-r{display:none}
   nav{padding:1.2rem 3rem}nav.sticky{padding:1rem 3rem}
@@ -329,7 +329,7 @@ footer::before{content:'';position:absolute;top:0;left:0;height:1px;width:0;back
       <span class="split-line"><span class="split-inner gold" id="s2">Junaid Alam</span></span>
     </h1>
     <div class="hero-sub">Lahore, Pakistan &nbsp;·&nbsp; Open to Global Opportunities</div>
-    <p class="hero-desc">Transforming complex enterprise workflows into elegant, automated systems. Specialist in Odoo ERP with 18+ international projects — with an Odoo Gold Partner serving clients in Saudi Arabia &amp; beyond.</p>
+    <p class="hero-desc">Transforming complex enterprise workflows into elegant, automated systems. Specialist in Odoo ERP with 18+ international projects - with an Odoo Gold Partner serving clients in Saudi Arabia &amp; beyond.</p>
     <div class="hero-cta">
       <a href="/cdn-cgi/l/email-protection#157f607b747c71747927242527557278747c793b767a78" class="cta-p mag"><div class="fill"></div><span class="lbl">✦ &nbsp;Hire Me</span></a>
       <a href="https://linkedin.com/in/junaid-alam2102" target="_blank" class="cta-s mag"><div class="fill"></div><span class="lbl">↗ &nbsp;LinkedIn</span></a>
@@ -385,14 +385,14 @@ footer::before{content:'';position:absolute;top:0;left:0;height:1px;width:0;back
   <div class="exlay">
     <div class="ex-intro">
       <h2 class="sh2 rv-l">Core<br><em>Expertise</em></h2>
-      <p class="rv d1">Deep specialization in Odoo ERP — from lean startup automation to large-scale multi-company enterprise deployments serving clients across the Gulf, Europe, and beyond.</p>
+      <p class="rv d1">Deep specialization in Odoo ERP - from lean startup automation to large-scale multi-company enterprise deployments serving clients across the Gulf, Europe, and beyond.</p>
     </div>
     <div class="exgrid">
       <div class="ec rv-sc"><div class="ec-shine"></div><span class="ec-icon">⚙️</span><div class="ec-t">Odoo ERP Development</div><div class="ec-d">Custom modules, ORM mastery, automated actions, server actions, and performance optimization across v16–v19 Community &amp; Enterprise editions.</div></div>
       <div class="ec rv-sc d1"><div class="ec-shine"></div><span class="ec-icon">🔄</span><div class="ec-t">Approval Workflow Automation</div><div class="ec-d">Dynamic multi-level approval systems for Sales, HR, Payroll, Purchasing, Leave, and Appraisals with role-based hierarchies.</div></div>
       <div class="ec rv-sc d2"><div class="ec-shine"></div><span class="ec-icon">🔗</span><div class="ec-t">API &amp; Third-Party Integration</div><div class="ec-d">REST APIs, WebSocket listeners, payment gateways, biometric devices, Microsoft Dynamics, delivery platforms, and mobile bridges.</div></div>
       <div class="ec rv-sc d3"><div class="ec-shine"></div><span class="ec-icon">🏢</span><div class="ec-t">Multi-Company Architecture</div><div class="ec-d">Bi-directional intercompany sync, multi-currency, multi-warehouse, cross-entity accounting, and intercompany validation workflows.</div></div>
-      <div class="ec rv-sc"><div class="ec-shine"></div><span class="ec-icon">📊</span><div class="ec-t">QWeb Reports &amp; Templates</div><div class="ec-d">Custom PDF templates for Invoices, POs, SOs, Payslips, and HR documents — branded and compliant to regional requirements.</div></div>
+      <div class="ec rv-sc"><div class="ec-shine"></div><span class="ec-icon">📊</span><div class="ec-t">QWeb Reports &amp; Templates</div><div class="ec-d">Custom PDF templates for Invoices, POs, SOs, Payslips, and HR documents - branded and compliant to regional requirements.</div></div>
       <div class="ec rv-sc d1"><div class="ec-shine"></div><span class="ec-icon">🚀</span><div class="ec-t">Migration &amp; Deployment</div><div class="ec-d">Database migrations between Odoo versions, Odoo Online → Odoo.sh transitions, error resolution, and Git-based CI/CD workflows.</div></div>
       <div class="ec rv-sc d2"><div class="ec-shine"></div><span class="ec-icon">🐍</span><div class="ec-t">Python &amp; Backend Engineering</div><div class="ec-d">Django REST Framework, PostgreSQL/MySQL optimization, Celery + Redis async tasks, Docker, and AWS EC2 production deployments.</div></div>
       <div class="ec rv-sc d3"><div class="ec-shine"></div><span class="ec-icon">📱</span><div class="ec-t">Mobile Development</div><div class="ec-d">Cross-platform Flutter and React Native apps with REST API integration, real-time data sync, and Play Store deployment.</div></div>
@@ -408,15 +408,15 @@ footer::before{content:'';position:absolute;top:0;left:0;height:1px;width:0;back
   <h2 class="sh2 rv">Professional<br><em>Experience</em></h2>
   <div class="timeline">
     <div class="te rv"><div class="te-bar"></div>
-      <div><div class="tperiod">NOV 2023 — PRESENT</div><div class="tco">Telenoc (Helcon IT)</div><div class="tbadge">Odoo Gold Partner · KSA</div></div>
-      <div><div class="trole">Odoo Developer &amp; Team Lead</div><ul class="tpts"><li>Led a developer team building and deploying custom Odoo modules across 10+ enterprise clients in Saudi Arabia.</li><li>Managed complete project lifecycles — requirement analysis, solution design, task delegation, code reviews, and deployment.</li><li>Integrated third-party services including payment platforms, delivery APIs, biometric attendance devices, and Microsoft Dynamics.</li><li>Managed Community and Enterprise deployments with multi-company, multi-currency, and multi-warehouse environments.</li><li>Enforced code quality, security, and scalability through agile practices, testing strategies, and documentation.</li></ul></div>
+      <div><div class="tperiod">NOV 2023 - PRESENT</div><div class="tco">Telenoc (Helcon IT)</div><div class="tbadge">Odoo Gold Partner · KSA</div></div>
+      <div><div class="trole">Odoo Developer &amp; Team Lead</div><ul class="tpts"><li>Led a developer team building and deploying custom Odoo modules across 10+ enterprise clients in Saudi Arabia.</li><li>Managed complete project lifecycles - requirement analysis, solution design, task delegation, code reviews, and deployment.</li><li>Integrated third-party services including payment platforms, delivery APIs, biometric attendance devices, and Microsoft Dynamics.</li><li>Managed Community and Enterprise deployments with multi-company, multi-currency, and multi-warehouse environments.</li><li>Enforced code quality, security, and scalability through agile practices, testing strategies, and documentation.</li></ul></div>
     </div>
     <div class="te rv"><div class="te-bar"></div>
-      <div><div class="tperiod">MAY 2023 — NOV 2023</div><div class="tco">Falcon Consulting</div><div class="tbadge">Mobile Dev · Lahore</div></div>
+      <div><div class="tperiod">MAY 2023 - NOV 2023</div><div class="tco">Falcon Consulting</div><div class="tbadge">Mobile Dev · Lahore</div></div>
       <div><div class="trole">Mobile Application Developer</div><ul class="tpts"><li>Built cross-platform mobile applications using Flutter and React Native for diverse client requirements.</li><li>Designed intuitive UIs and integrated REST APIs for real-time data synchronization across iOS and Android.</li><li>Managed bug fixing, app optimization, and Play Store deployment workflows.</li></ul></div>
     </div>
     <div class="te rv"><div class="te-bar"></div>
-      <div><div class="tperiod">NOV 2022 — MAY 2023</div><div class="tco">Codexia Technologies</div><div class="tbadge">Backend · Lahore</div></div>
+      <div><div class="tperiod">NOV 2022 - MAY 2023</div><div class="tco">Codexia Technologies</div><div class="tbadge">Backend · Lahore</div></div>
       <div><div class="trole">Associate Software Engineer</div><ul class="tpts"><li>Developed scalable web applications using Python, Django, and Django REST Framework.</li><li>Optimized PostgreSQL and MySQL database structures for high-performance production environments.</li><li>Implemented Celery and Redis for asynchronous background tasks; deployed on AWS EC2 using Docker and Git.</li><li>Built role-based access control, authentication, and authorization systems using Django's security features.</li></ul></div>
     </div>
   </div>
@@ -428,7 +428,7 @@ footer::before{content:'';position:absolute;top:0;left:0;height:1px;width:0;back
 <section id="projects" class="sw">
   <div class="phead">
     <div><div class="stag rv"><span class="snum">03</span><div class="sline"></div><span class="slabel">Delivered work</span></div><h2 class="sh2 rv">All 18<br><em>Projects</em></h2></div>
-    <p class="rv">Enterprise solutions across hospitality, automotive, finance, retail, HR &amp; more — deployed internationally in KSA, Spain &amp; beyond.</p>
+    <p class="rv">Enterprise solutions across hospitality, automotive, finance, retail, HR &amp; more - deployed internationally in KSA, Spain &amp; beyond.</p>
   </div>
   <div class="fbar rv">
     <button class="fb act" onclick="fp('all',this)">All (18)</button>
@@ -440,11 +440,11 @@ footer::before{content:'';position:absolute;top:0;left:0;height:1px;width:0;back
   <div class="pgrid" id="pgrid">
     <div class="pc tilt" data-ver="v19"><div class="pc-shine"></div><div class="pc-top-bar"></div><div class="pc-corner"></div><div><div class="pcmeta"><span class="pcver">Odoo v19</span><span class="pcreg"><span class="flag">🇸🇦</span>Saudi Arabia</span></div><div class="pcname">Sadara Capital<br>Lease Accounting</div><p class="pcdesc">Custom invoice report template, Lease Accounting module with automated financial postings and lease liability tracking, and Lease Scheduling module for installment planning and automated payment schedules.</p></div><div class="pctags"><span class="pctag">Lease Accounting</span><span class="pctag">Finance</span><span class="pctag">Compliance</span><span class="pctag">QWeb</span></div></div>
 
-    <div class="pc tilt" data-ver="v18"><div class="pc-shine"></div><div class="pc-top-bar"></div><div class="pc-corner"></div><div><div class="pcmeta"><span class="pcver">Odoo v18</span><span class="pcreg"><span class="flag">🇸🇦</span>Saudi Arabia</span></div><div class="pcname">Prive — POS<br>Loyalty Platform</div><p class="pcdesc">Custom POS integration with third-party payment &amp; loyalty platform. WebSocket notifications, automatic order validation, real-time loyalty tier discounts, transaction retry handling, and full accounting reconciliation.</p></div><div class="pctags"><span class="pctag">POS</span><span class="pctag">WebSocket</span><span class="pctag">REST API</span><span class="pctag">Loyalty</span></div></div>
+    <div class="pc tilt" data-ver="v18"><div class="pc-shine"></div><div class="pc-top-bar"></div><div class="pc-corner"></div><div><div class="pcmeta"><span class="pcver">Odoo v18</span><span class="pcreg"><span class="flag">🇸🇦</span>Saudi Arabia</span></div><div class="pcname">Prive - POS<br>Loyalty Platform</div><p class="pcdesc">Custom POS integration with third-party payment &amp; loyalty platform. WebSocket notifications, automatic order validation, real-time loyalty tier discounts, transaction retry handling, and full accounting reconciliation.</p></div><div class="pctags"><span class="pctag">POS</span><span class="pctag">WebSocket</span><span class="pctag">REST API</span><span class="pctag">Loyalty</span></div></div>
 
     <div class="pc tilt" data-ver="v18"><div class="pc-shine"></div><div class="pc-top-bar"></div><div class="pc-corner"></div><div><div class="pcmeta"><span class="pcver">Odoo v18</span><span class="pcreg"><span class="flag">🇸🇦</span>Saudi Arabia</span></div><div class="pcname">TopNet<br>Approval &amp; HR Flows</div><p class="pcdesc">Sales Order approval with Sales Lead authorization, Helpdesk escalation routing, dynamic per-employee leave approval hierarchies, multi-level appraisal flows, and CRM-Helpdesk ticket creation from Leads via wizard.</p></div><div class="pctags"><span class="pctag">Approvals</span><span class="pctag">Helpdesk</span><span class="pctag">CRM</span><span class="pctag">HR</span></div></div>
 
-    <div class="pc tilt" data-ver="v18"><div class="pc-shine"></div><div class="pc-top-bar"></div><div class="pc-corner"></div><div><div class="pcmeta"><span class="pcver">Odoo v18</span><span class="pcreg"><span class="flag">🇸🇦</span>Saudi Arabia</span></div><div class="pcname">Al Ventura<br>Hotel Management</div><p class="pcdesc">Full Hotel Management Module — room bookings, check-in/out, availability tracking, POS-to-guest billing, consolidated invoicing, real-time front-desk dashboards, and QWeb occupancy analytics.</p></div><div class="pctags"><span class="pctag">Hotel Mgmt</span><span class="pctag">POS Bridge</span><span class="pctag">QWeb</span><span class="pctag">Accounting</span></div></div>
+    <div class="pc tilt" data-ver="v18"><div class="pc-shine"></div><div class="pc-top-bar"></div><div class="pc-corner"></div><div><div class="pcmeta"><span class="pcver">Odoo v18</span><span class="pcreg"><span class="flag">🇸🇦</span>Saudi Arabia</span></div><div class="pcname">Al Ventura<br>Hotel Management</div><p class="pcdesc">Full Hotel Management Module - room bookings, check-in/out, availability tracking, POS-to-guest billing, consolidated invoicing, real-time front-desk dashboards, and QWeb occupancy analytics.</p></div><div class="pctags"><span class="pctag">Hotel Mgmt</span><span class="pctag">POS Bridge</span><span class="pctag">QWeb</span><span class="pctag">Accounting</span></div></div>
 
     <div class="pc tilt" data-ver="v18"><div class="pc-shine"></div><div class="pc-top-bar"></div><div class="pc-corner"></div><div><div class="pcmeta"><span class="pcver">Odoo v18</span><span class="pcreg"><span class="flag">🇸🇦</span>Saudi Arabia</span></div><div class="pcname">Universal Cars<br>Workshop ERP</div><p class="pcdesc">Workshop Management with job cards, diagnoses and work orders. Global/line discounts, manager approval for threshold discounts, credit limit exceedance flows, Sales Territory restrictions, landed cost automation, and credit note automation.</p></div><div class="pctags"><span class="pctag">Workshop</span><span class="pctag">Credit Limit</span><span class="pctag">Sales Territory</span><span class="pctag">Automation</span></div></div>
 
@@ -458,7 +458,7 @@ footer::before{content:'';position:absolute;top:0;left:0;height:1px;width:0;back
 
     <div class="pc tilt" data-ver="v18"><div class="pc-shine"></div><div class="pc-top-bar"></div><div class="pc-corner"></div><div><div class="pcmeta"><span class="pcver">Odoo v18 Community</span><span class="pcreg"><span class="flag">🇪🇸</span>Spain</span></div><div class="pcname">Neon51<br>CRM Automation</div><p class="pcdesc">Incoming/outgoing email server configuration, automated lead generation from incoming emails, CRM stage and activity automation, and client email notifications triggered on pipeline stage transitions.</p></div><div class="pctags"><span class="pctag">CRM</span><span class="pctag">Email Automation</span><span class="pctag">Lead Gen</span><span class="pctag">Community</span></div></div>
 
-    <div class="pc tilt" data-ver="v18"><div class="pc-shine"></div><div class="pc-top-bar"></div><div class="pc-corner"></div><div><div class="pcmeta"><span class="pcver">Odoo v18</span><span class="pcreg"><span class="flag">🇸🇦</span>Saudi Arabia</span></div><div class="pcname">Creation Source<br>Invoicing &amp; Discounts</div><p class="pcdesc">Custom invoice templates using QWeb for client-specific formats. Custom module for percentage and fixed discounts in Sales, Purchase, and Invoicing — including global Sale Order and Invoice discount functionality.</p></div><div class="pctags"><span class="pctag">QWeb</span><span class="pctag">Discounts</span><span class="pctag">Sales</span><span class="pctag">Invoicing</span></div></div>
+    <div class="pc tilt" data-ver="v18"><div class="pc-shine"></div><div class="pc-top-bar"></div><div class="pc-corner"></div><div><div class="pcmeta"><span class="pcver">Odoo v18</span><span class="pcreg"><span class="flag">🇸🇦</span>Saudi Arabia</span></div><div class="pcname">Creation Source<br>Invoicing &amp; Discounts</div><p class="pcdesc">Custom invoice templates using QWeb for client-specific formats. Custom module for percentage and fixed discounts in Sales, Purchase, and Invoicing - including global Sale Order and Invoice discount functionality.</p></div><div class="pctags"><span class="pctag">QWeb</span><span class="pctag">Discounts</span><span class="pctag">Sales</span><span class="pctag">Invoicing</span></div></div>
 
     <div class="pc tilt" data-ver="v18"><div class="pc-shine"></div><div class="pc-top-bar"></div><div class="pc-corner"></div><div><div class="pcmeta"><span class="pcver">Odoo v18</span><span class="pcreg"><span class="flag">🇸🇦</span>Saudi Arabia</span></div><div class="pcname">Speetech<br>Payroll &amp; Compliance</div><p class="pcdesc">Custom QWeb invoice templates, company-specific salary rules and payroll structures, automated Iqama expiry notifications for HR compliance, and a dynamic multi-level payroll approval flow before payment processing.</p></div><div class="pctags"><span class="pctag">Payroll</span><span class="pctag">QWeb</span><span class="pctag">Iqama Alerts</span><span class="pctag">Approvals</span></div></div>
 
@@ -500,9 +500,9 @@ footer::before{content:'';position:absolute;top:0;left:0;height:1px;width:0;back
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-/* ══════════════════════════════════════
+/* ======================================
    LOADER
-══════════════════════════════════════ */
+====================================== */
 const ldfill=document.getElementById('ldfill');
 const ldpct=document.getElementById('ldpct');
 const ldline=document.getElementById('ldline');
@@ -523,9 +523,9 @@ function startSite(){
   initProgress();initParallax();
 }
 
-/* ══════════════════════════════════════
+/* ======================================
    AURORA CANVAS (animated color blobs)
-══════════════════════════════════════ */
+====================================== */
 function initAurora(){
   const cv=document.getElementById('aurora');
   const ctx=cv.getContext('2d');
@@ -578,9 +578,9 @@ function initAurora(){
   frame();
 }
 
-/* ══════════════════════════════════════
+/* ======================================
    CUSTOM CURSOR
-══════════════════════════════════════ */
+====================================== */
 function initCursor(){
   const dot=document.getElementById('cdot');
   const ring=document.getElementById('cring');
@@ -613,17 +613,17 @@ function initCursor(){
   })();
 }
 
-/* ══════════════════════════════════════
+/* ======================================
    NAV
-══════════════════════════════════════ */
+====================================== */
 function initNav(){
   const nav=document.getElementById('nav');
   window.addEventListener('scroll',()=>nav.classList.toggle('sticky',window.scrollY>60));
 }
 
-/* ══════════════════════════════════════
+/* ======================================
    SCROLL PROGRESS
-══════════════════════════════════════ */
+====================================== */
 function initProgress(){
   const bar=document.getElementById('spbar');
   window.addEventListener('scroll',()=>{
@@ -632,9 +632,9 @@ function initProgress(){
   });
 }
 
-/* ══════════════════════════════════════
-   SPLIT TEXT — hero lines
-══════════════════════════════════════ */
+/* ======================================
+   SPLIT TEXT - hero lines
+====================================== */
 function initSplitText(){
   setTimeout(()=>{
     document.getElementById('s1').classList.add('in');
@@ -642,9 +642,9 @@ function initSplitText(){
   },600);
 }
 
-/* ══════════════════════════════════════
+/* ======================================
    SCROLL REVEAL (3 types)
-══════════════════════════════════════ */
+====================================== */
 function initReveal(){
   const io=new IntersectionObserver((entries)=>{
     entries.forEach((e,i)=>{
@@ -662,9 +662,9 @@ function initReveal(){
   document.querySelectorAll('.rv,.rv-l,.rv-sc').forEach(el=>io.observe(el));
 }
 
-/* ══════════════════════════════════════
+/* ======================================
    COUNTER ANIMATION
-══════════════════════════════════════ */
+====================================== */
 function initCounters(){
   const io=new IntersectionObserver(entries=>{
     entries.forEach(e=>{
@@ -685,9 +685,9 @@ function initCounters(){
   document.querySelectorAll('.sn[data-target]').forEach(el=>io.observe(el));
 }
 
-/* ══════════════════════════════════════
+/* ======================================
    3D TILT on cards
-══════════════════════════════════════ */
+====================================== */
 function initTilt(){
   document.querySelectorAll('.tilt').forEach(el=>{
     el.addEventListener('mousemove',e=>{
@@ -710,9 +710,9 @@ function initTilt(){
   });
 }
 
-/* ══════════════════════════════════════
+/* ======================================
    MAGNETIC BUTTONS
-══════════════════════════════════════ */
+====================================== */
 function initMagnets(){
   document.querySelectorAll('.mag').forEach(btn=>{
     btn.addEventListener('mousemove',e=>{
@@ -729,9 +729,9 @@ function initMagnets(){
   });
 }
 
-/* ══════════════════════════════════════
+/* ======================================
    PARALLAX
-══════════════════════════════════════ */
+====================================== */
 function initParallax(){
   const heroH=document.querySelector('.hero-h');
   const heroDesc=document.querySelector('.hero-desc');
@@ -744,9 +744,9 @@ function initParallax(){
   },{passive:true});
 }
 
-/* ══════════════════════════════════════
+/* ======================================
    PROJECT FILTER
-══════════════════════════════════════ */
+====================================== */
 function fp(ver,btn){
   document.querySelectorAll('.fb').forEach(b=>b.classList.remove('act'));
   btn.classList.add('act');
@@ -757,4 +757,13 @@ function fp(ver,btn){
       card.classList.remove('hidden');
       card.style.opacity='0';card.style.transform='translateY(30px) scale(.97)';
       const delay=idx*55;idx++;
-      setTimeout(()=>{card.style.transition='opacity .45s e
+      setTimeout(()=>{card.style.transition='opacity .45s ease,transform .45s cubic-bezier(.16,1,.3,1)';card.style.opacity='1';card.style.transform='translateY(0) scale(1)'},delay);
+    }else{
+      card.style.opacity='0';card.style.transform='scale(.95)';
+      setTimeout(()=>card.classList.add('hidden'),280);
+    }
+  });
+}
+</script>
+</body>
+</html>
